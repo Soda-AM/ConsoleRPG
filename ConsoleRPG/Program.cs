@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
 using static ConsoleRPG.GameSessionManager;
 
 namespace ConsoleRPG
@@ -314,7 +315,7 @@ namespace ConsoleRPG
         }
     }
 
-    #region Шаблоны врагов
+    #region enemy templates
     class Zombie : Enemy
     {
         public Zombie() : base(80, 10, 20, "Зомби")
@@ -403,7 +404,6 @@ namespace ConsoleRPG
     }
     #endregion
 
-    // Классы для управления игрой
     class GameUI 
     {
         public static void WriteText(string text, ConsoleColor color)
